@@ -41,16 +41,20 @@ const App = () => {
 
     return (
         <div className="container mx-auto p-4">
-            <h1 className="text-2xl font-bold mb-4">Imgs</h1>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            <h1 className="text-3xl font-extrabold text-center mb-8">Gallery</h1>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
                 {imgs.map(img => (
-                    <div className="border h-96 border-gray-200 rounded-lg p-2" key={img.id}>
-                        <img className="w-full h-auto rounded-md" src={img.thumbnailUrl} alt={img.title} />
-                        <p className="mt-2 text-sm text-gray-700">{img.title}</p>
+                    <div className="border shadow-lg h-auto border-gray-300 rounded-lg overflow-hidden transition-transform transform hover:scale-105" key={img.id}>
+                        <img className="w-full h-48 object-cover" src={img.thumbnailUrl} alt={img.title} />
+                        <div className="p-4">
+                            <p className="text-sm text-gray-600">{img.title}</p>
+                        </div>
                     </div>
                 ))}
             </div>
-            <div ref={loaderRef} className="mt-4 h-1" />
+            <div ref={loaderRef} className="mt-8 h-10 w-full flex justify-center items-center">
+                <div className="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-blue-500"></div>
+            </div>
         </div>
     );
 };
