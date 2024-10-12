@@ -45,7 +45,7 @@ const App = () => {
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
                 {imgs.map(img => (
                     <div className="border shadow-lg h-auto border-gray-300 rounded-lg overflow-hidden transition-transform transform hover:scale-105" key={img.id}>
-                        <img className="w-full h-48 object-cover" src={img.thumbnailUrl} alt={img.title} />
+                        <img className="w-full h-48 object-cover" src={img.url} alt={img.title} />
                         <div className="p-4">
                             <p className="text-sm text-gray-600">{img.title}</p>
                         </div>

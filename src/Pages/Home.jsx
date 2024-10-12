@@ -29,7 +29,7 @@ function Home() {
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 justify-center">
                 {data.map(value => (
                     <div key={value.id} className='bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow'>
-                        <img className='w-full h-48 object-cover rounded-md' src={value.thumbnailUrl} alt="rasm" />
+                        <img className='w-full h-48 object-cover rounded-md' src={value.url} alt="rasm" />
                     </div>
                 ))}
             </div>
